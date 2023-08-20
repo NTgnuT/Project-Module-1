@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(254, 247, 239);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+header>img {
+    width: 140px;
+    height: 100px;
+}
+
+#search {
+    width: 420px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+header button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(254, 247, 239);
+}
+
+.right ul {
+    display: flex;
+    gap: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+/* -------------------------------------------------------------- */
+.dropdown-content a {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropbtn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f1f1f1;
+    /* min-width: 140px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropbtn:hover {
+    background-color: lightskyblue;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+}
+
+.dropdown-content a {
+    color: black;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightskyblue;
+}
+
+.dropbtn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.ulheader {
+    margin-bottom: 0;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: lightskyblue;
+}
+
+nav ul {
+    display: flex;
+    position: relative;
+}
+
+nav ul ul {
+    position: absolute;
+    flex-direction: column;
+    visibility: hidden;
+    z-index: 90;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+}
+
+nav ul ul li a {
+    background-color: lightskyblue;
+    border-radius: 5px;
+    margin-left: -30px;
+}
+
+nav li {
+    margin: auto;
+    line-height: 50px;
+}
+
+nav img {
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    width: 140px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: larger;
+    color: white;
+}
+
+nav a:hover {
+    background-color: rgb(85, 189, 254);
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------- */
+
+.product-detail {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    gap: 40px;
+}
+
+.detail_img img {
+    width: 600px;
+    height: 600px;
+}
+
+.detail_info {
+    width: 600px;
+    height: 500px;
+}
+
+.detail_info h3 {
+    color: lightskyblue;
+}
+
+.detail_info h2 {
+    margin-top: 20px;
+}
+
+.detail_info h4 {
+    margin: 20px 0;
+}
+
+.count_box {
+    margin: 40px 0 20px;
+}
+
+#count {
+    width: 90px;
+    height: 37px;
+    border: 0.5px solid lightskyblue;
+}
+
+.count_box button {
+    width: 200px;
+    height: 38px;
+    border: none;
+    background-color: lightskyblue;
+    color: white;
+    font-weight: bolder;
+}
+
+.count_box button:hover {
+    background-color: black;
+}
+
+.share span {
+    margin-right: 10px;
+    font-size: large;
+}
+
+.share i {
+    width: 20px;
+}
+
+.share i:hover {
+    color: lightskyblue;
+}
+
+.policy p {
+    margin: 5px 0;
+}
+
+.policy p i {
+    color: lightskyblue;
+}
+
+.detail_img figure img {
+    width: 400px;
+    height: 400px;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.detail_img figure:hover img {
+    transform: scale(1.3);
+}
+
+.detail_img figure {
+    overflow: hidden;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+footer {
+    display: flex;
+    margin: 50px 0 30px;
+}
+
+.box1 img {
+    width: 150px;
+    height: 100px;
+}
+
+.box1,
+.box2 {
+    width: 25%;
+    height: 300px;
+    border: 0.5px solid rgb(219, 218, 218);
+    background-color: rgb(254, 247, 239);
+}
+
+.box1_small {
+    margin: 40px 40px;
+}
+
+.box1_small p {
+    margin: 20px 0;
+}
+
+.box1_small input {
+    width: 220px;
+    height: 40px;
+    border: none;
+}
+
+.box1 button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.box1 button:hover {
+    background-color: lightskyblue;
+}
+
+.box2 h3 {
+    margin-bottom: 40px;
+}
+
+.box2 li {
+    margin: 15px 0;
+}
+
+.box2 li:hover {
+    color: lightskyblue;
+    cursor: pointer;
+}
+
+.upHeader {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+}
+
+.upHeader:hover {
+    background-color: lightskyblue;
+}
+
+.upHeader i {
+    display: flex;
+    line-height: 40px;
+    padding-left: 35%;
+}
+
+.upHeader i:hover {
+    color: white;
+}

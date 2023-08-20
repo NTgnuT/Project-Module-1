@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(254, 247, 239);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+header>img {
+    width: 140px;
+    height: 100px;
+}
+
+#search {
+    width: 420px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+header button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(254, 247, 239);
+}
+
+.right ul {
+    display: flex;
+    gap: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+/* -------------------------------------------------------------- */
+.dropdown-content a {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropbtn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f1f1f1;
+    /* min-width: 140px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropbtn:hover {
+    background-color: lightskyblue;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+}
+
+.dropdown-content a {
+    color: black;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightskyblue;
+}
+
+.dropbtn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.ulheader {
+    margin-bottom: 0;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: lightskyblue;
+}
+
+nav ul {
+    display: flex;
+    position: relative;
+}
+
+nav ul ul {
+    position: absolute;
+    flex-direction: column;
+    visibility: hidden;
+    z-index: 90;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+}
+
+nav ul ul li a {
+    background-color: lightskyblue;
+    border-radius: 5px;
+    margin-left: -30px;
+}
+
+nav li {
+    margin: auto;
+    line-height: 50px;
+}
+
+nav img {
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    width: 140px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: larger;
+    color: white;
+}
+
+nav a:hover {
+    background-color: rgb(85, 189, 254);
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+.name-table h2 {
+    margin: 30px 0 30px 10%;
+
+}
+
+thead,
+tbody,
+tfoot,
+th,
+tr,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    width: 90%;
+}
+
+table tr {
+    height: 50px;
+}
+
+#cart-table .btn-Edit {
+    border: none;
+    width: 70px;
+    height: 30px;
+    background-color: lightskyblue;
+}
+
+#cart-table .btn-Delete {
+    border: none;
+    width: 70px;
+    height: 30px;
+    background-color: red;
+}
+
+.checkout {
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+    justify-content: space-around;
+}
+
+.btn-log {
+    display: flex;
+    gap: 20px;
+
+}
+
+.btn-log button {
+    width: 160px;
+    height: 50px;
+    font-weight: bolder;
+    border: none;
+    background-color: lightskyblue;
+    color: white;
+}
+
+.btn-log button:hover {
+    background-color: black;
+}
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+footer {
+    display: flex;
+    margin: 50px 0 30px;
+}
+
+.box1 img {
+    width: 150px;
+    height: 100px;
+}
+
+.box1,
+.box2 {
+    width: 25%;
+    height: 300px;
+    border: 0.5px solid rgb(219, 218, 218);
+    background-color: rgb(254, 247, 239);
+}
+
+.box1_small {
+    margin: 40px 40px;
+}
+
+.box1_small p {
+    margin: 20px 0;
+}
+
+.box1_small input {
+    width: 220px;
+    height: 40px;
+    border: none;
+}
+
+.box1 button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.box1 button:hover {
+    background-color: lightskyblue;
+}
+
+.box2 h3 {
+    margin-bottom: 40px;
+}
+
+.box2 li {
+    margin: 15px 0;
+}
+
+.box2 li:hover {
+    color: lightskyblue;
+    cursor: pointer;
+}
+
+.upHeader {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+}
+
+.upHeader:hover {
+    background-color: lightskyblue;
+}
+
+.upHeader i {
+    display: flex;
+    line-height: 40px;
+    padding-left: 35%;
+}
+
+.upHeader i:hover {
+    color: white;
+}

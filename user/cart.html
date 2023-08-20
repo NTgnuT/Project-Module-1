@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header" id="myHeader">
+        <img src="/ảnh/logo.png" alt="logo">
+        <div class="find">
+            <input type="text" id="search" class="search" placeholder="Tìm kiếm sản phẩm...">
+            <button type="button" id="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="right">
+            <ul class="ulheader">
+                <li><a href="#">Introduce</a></li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="#">Cart</a>
+                </li>
+                <li class="account">
+                    <!-- <div class="dropdown">
+                            <div class="dropbtn">
+                                <img src="ảnh/avatar.jpg" alt="">
+                                <p>TungNT</p>
+                            </div>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="">Home</a>
+                                <a href="">Đăng xuất</a>
+                            </div>
+                        </div> -->
+                    <!-- <i class="fa-solid fa-user"></i>
+                            <a href="/login.html">Đăng nhập</a> -->
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <nav id="nav" class="content">
+        <ul>
+            <li><a href="/index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="" class="hidden">Product <i class="fa-solid fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="/user/product-user.html">Fresh Smoothie</a></li>
+                    <li><a href="/user/product-user.html">Fresh Juice</a></li>
+                    <!-- <li><a href="#">Nước ép trái cây</a></li> -->
+                </ul>
+            </li>
+            <li>
+                <a href="">
+                    <img src="//theme.hstatic.net/200000438877/1000814055/14/icon_menu_flashsale.png?v=754" alt="">
+                    Best Seller
+                </a>
+            </li>
+            <li>
+                <a href="#mid3_info">Page</a>
+            </li>
+            <li>
+                <a href="#mid2_info">Blog</a>
+            </li>
+        </ul>
+
+    </nav>
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+    <div class="name-table">
+        <h2>Your Shopping Cart</h2>
+    </div>
+    <table>
+        <thead>
+            <th>STT</th>
+            <th>ProductName</th>
+            <th>Image</th>
+            <th>UnitPrice</th>
+            <th>Quantity</th>
+            <th>TotalAmount</th>
+            <th colspan="2">Action</th>
+        </thead>
+        <tbody id="cart-table">
+            <!-- <tr>
+                <td>${index + 1}</td>
+                <td>${product.name}</td>
+                <td><img src="/ảnh/${product.image}" width="50" height="50" style="object-fit: cover;" alt=""></td>
+                <td>${product.unit_price} VNĐ</td>
+                <td><input id="quantity_${ct.idProduct}" type="number" min="1" value="${ct.quantity}" /></td>
+                <td>${product.unit_price * ct.quantity} VNĐ</td>
+                <td>
+                    <button type="button" class="btn-Edit" onclick="handleDelete(${ct.idProduct})">
+                        <i class="fa-solid fa-wrench"></i>
+                        Edit
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn-Delete" onclick="handleUpdate(this,${ct.idProduct})">
+                        <i class="fa-solid fa-trash"></i>
+                        Delete
+                    </button>
+                </td>
+            </tr> -->
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+    <div id="checkout" class="checkout">
+        <textarea name="" id="note" cols="90" rows="4" placeholder="Note..."></textarea>
+        <div class="btn-log">
+            <button onclick="keepBuying()">Keep buying</button>
+            <button onclick="handleCheckOut()">Order</button>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+    <footer>
+        <div class="box1">
+            <div class="box1_small">
+                <img src="/ảnh/logo.png" alt="">
+                <p>Subscribe our newsletter and get <br>
+                    discount 30% off
+                </p>
+                <input type="text" id="inEmail" placeholder="Your email address...">
+                <button type="button">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box1_small">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li>Delivery</li>
+                    <li>Legal Notice</li>
+                    <li>Documentation</li>
+                    <li>Secure payment</li>
+                    <li>Stores</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box1_small">
+                <h3>Quick Shop</h3>
+                <ul>
+                    <li>Pagination</li>
+                    <li>Terms & Condition</li>
+                    <li>Contact</li>
+                    <li>Home page</li>
+                    <li>Term of us</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box1_small">
+                <h3>Company</h3>
+                <ul>
+                    <li>Help Center</li>
+                    <li>Address Store</li>
+                    <li>Privacy Policy</li>
+                    <li>Receivers & Amplifiers</li>
+                    <li>Clothings</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="upHeader">
+        <a href="#nav"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+
+
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="/user/add-cart.js"></script>
+</body>
+
+</html>

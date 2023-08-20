@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <div class="picture">
+        <img src="/ảnh/top1.1.webp" alt="">
+    </div>
+
+    <div id="login">
+        <form action="">
+            <h1>Đăng nhập</h1>
+            <div>
+                <input type="text" id="username" placeholder="Nhập tên đăng nhập">
+            </div>
+            <div>
+                <input type="password" id="pass" placeholder="Nhập mật khẩu">
+                <div id="error" class="form-text text-danger"></div>
+            </div>
+            <button type="button" onclick="handleLogin()" id="btn_login">Đăng nhập</button> <br>
+            <div id="bot_login">
+                <p>Bạn chưa có tài khoản?</p>
+                <a href="/register.html">Đăng ký ngay</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>

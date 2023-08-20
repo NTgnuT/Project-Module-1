@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div class="picture">
+        <img src="/ảnh/top1.1.webp" alt="">
+    </div>
+
+    <div id="register" class="register">
+        <form action="">
+            <h1>Đăng ký</h1>
+            <div>
+                <input type="text" id="fullName" placeholder="Họ và tên">
+                <div id="fullNameError" class="form-text text-danger"></div>
+            </div>
+            <div>
+                <input type="email" id="email" placeholder="Địa chỉ email">
+                <div id="emailError" class="form-text text-danger"></div>
+            </div>
+            <div>
+                <input type="text" id="username" placeholder='Tên đăng nhập'>
+                <div id="usernameError" class="form-text text-danger"></div>
+            </div>
+            <div>
+                <input type="password" id="pass" placeholder="Mật khẩu">
+                <div id="passwordError" class="form-text text-danger"></div>
+            </div>
+            <div>
+                <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu">
+                <div id="confirmPassError" class="form-text text-danger"></div>
+            </div>
+            <div>
+                <button type="button" onclick="handleLogin()">Đăng ký</button>
+            </div>
+            <div>
+                <button type="button" onclick="backLogin()"><a href="/login.html">Quay lại</a></button>
+            </div>
+        </form>
+
+        <script src="/js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.toolbar {
+    width: 350px;
+    height: 100%;
+    background-color: lightskyblue;
+    position: fixed;
+    color: black;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.logo img {
+    height: 80px;
+    width: 100px;
+}
+
+.logo {
+    background-color: rgb(254, 247, 239);
+    padding: 7px 20px;
+    display: block;
+}
+
+h3 {
+    padding: 20px;
+}
+
+.nav {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.463);
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_icon {
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    height: 48.4px;
+}
+
+.nav_icon:hover {
+    background-color: white;
+}
+
+.active {
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.nav ul {
+    padding-left: 0;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: #551a8b;
+}
+
+.nav h3 {
+    font-weight: bolder;
+    font-size: larger;
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+#form {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.input-form {
+    padding: 10px 0;
+}
+
+.input-form input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid rgba(41, 50, 80, 0.979);
+    margin-top: 10px;
+}
+
+.input-form textarea {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#image {
+    border: none;
+}
+
+.input-form select {
+    width: 190px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 0 10px;
+}
+
+#form button {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: orange;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+
+.main {
+    margin-left: 350px;
+}
+
+.main nav {
+    height: 80px;
+    background-color: rgb(213, 235, 250);
+}
+
+.main nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.main nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-search p {
+    font-size: x-large;
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+
+#search {
+    width: 450px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-search button {
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    font-size: small;
+}
+
+.form-search button:hover {
+    background-color: white;
+}
+
+.navmain .account a {
+    text-decoration: none;
+    color: black;
+}
+
+.navmain ul {
+    margin-bottom: 0;
+}
+
+.dropdown-content a {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.dropbtn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f1f1f1;
+    /* min-width: 140px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropbtn:hover {
+    background-color: lightskyblue;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+}
+
+.dropdown-content a {
+    color: black;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: lightskyblue;
+}
+
+.dropbtn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+
+
+
+/* --------------------------------------------------------------------------------------- */
+
+
+#table_box {
+    width: 97%;
+    background-color: rgb(213, 235, 250);
+    margin: 20px auto 0;
+    border-radius: 10px;
+    border: 1px solid rgb(213, 235, 250);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 15px 0;
+
+}
+
+#table_box th,
+#table_box td {
+    border: 0.5px solid black;
+    text-align: center;
+}
+
+.table table {
+    margin: 20px;
+    width: 97%;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+table th {
+    padding: 20px;
+}
+
+table td {
+    text-align: center;
+    padding: 10px;
+}
+
+#list .train {
+    background-color: lightskyblue;
+    border: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#list .delete {
+    background-color: red;
+    border: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.pagination li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: lightgray;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.pagination a:hover {
+    background-color: lightskyblue;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_product</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="toolbar">
+        <div class="logo">
+            <img src="/ảnh/logo.png" alt="">
+        </div>
+        <nav class="nav" id="nav">
+            <h3>ADMIN</h3>
+            <ul>
+                <a href="/admin/product.html">
+                    <li class="nav_icon">
+                        <i class="fa-solid fa-martini-glass-citrus"></i>
+                        <span>Sản Phẩm</span>
+                    </li>
+                </a>
+                <a href="/admin/category.html">
+                    <li class="nav_icon">
+                        <i class="fa-solid fa-bars"></i>
+                        <span>Danh Mục</span>
+                    </li>
+                </a>
+                <a href="/admin/order.html">
+                    <li class="nav_icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Đơn Hàng</span>
+                    </li>
+                </a>
+                <a href="/admin/user.html">
+                    <li class="nav_icon active">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Người Dùng</span>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <!-------------------------------------------------------------------------------------------------->
+        <div>
+            <h3>THÔNG TIN NGƯỜI DÙNG</h3>
+            <p id="warn_box"></p>
+            <form action="" id="form">
+                <div class="input-form">
+                    <label for="product_id">ID:</label><br>
+                    <input type="text" id="product_id" placeholder="ID người dùng" readonly>
+                </div>
+                <div class="input-form">
+                    <label for="name_login">Tên đăng nhập (*):</label><br>
+                    <input type="text" id="name_login" placeholder="Tên đăng nhập" readonly>
+                </div>
+                <div class="input-form">
+                    <label for="name">Họ và tên:</label><br>
+                    <input type="text" id="name" placeholder="Họ và tên" readonly>
+                </div>
+                <div class="input-form">
+                    <label for="email">Email (*):</label><br>
+                    <input type="email" id="email" placeholder="Email" readonly>
+                </div>
+                <div class="input-form">
+                    <label for="catagory">Vai trò:</label>
+                    <select id="catagory">
+                        <option value="USER">Khách hàng</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button type="button">Lưu</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------------------------------------------------->
+    <div class="main">
+        <nav class="navmain">
+            <div class="form-search">
+                <p>Quản lý Người dùng</p>
+                <div>
+                    <input type="text" id="search" placeholder="Nhập tên người dùng cần tìm kiếm">
+                    <button type="button" onclick="handleSearch()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+            <ul>
+                <li class="notifications">
+                    <span>2</span>
+                    <i class="fa-regular fa-bell"></i>
+                </li>
+                <li class="notifications">
+                    <span>3</span>
+                    <i class="fa-regular fa-message"></i>
+                </li>
+                <li class="account">
+                    <!-- <div class="dropdown">
+                        <div class="dropbtn">
+                            <img src="ảnh/avatar.jpg" alt="">
+                            <p>TungNT</p>
+                        </div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="">Home</a>
+                            <a href="">Đăng xuất</a>
+                        </div>
+                    </div> -->
+                    <!-- <i class="fa-solid fa-user"></i>
+                    <a href="/login.html">Đăng nhập</a> -->
+                </li>
+            </ul>
+        </nav>
+        <main>
+
+            <div class="table">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên đăng nhập</th>
+                            <th>Họ và tên</th>
+                            <th>Email</th>
+                            <th>Vai trò</th>
+                            <th colspan="2">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>tungnt</td>
+                            <td>Tung</td>
+                            <td>tung@gmail.com</td>
+                            <td>Admin</td>
+                            <td><button type="button" class="train" onclick="">
+                                    <i class="fa-solid fa-wrench"></i>
+                                    Sửa
+                                </button></td>
+                            <td><button type="button" class="delete" onclick="">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Xóa
+                                </button></td>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+
+                <div class="page">
+                    <ul class="pagination" id="pagination">
+
+
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="user.js"></script>
+</body>
+
+</html>
